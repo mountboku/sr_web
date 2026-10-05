@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html { scroll-behavior: smooth; }
+body { margin: 0; min-width: 320px; }
+* { box-sizing: border-box; }
+
+.hero-shadow {
+  text-shadow: 0 4px 0 rgba(0,0,0,.13), 0 8px 12px rgba(0,0,0,.25);
+}
+.orange-glow {
+  box-shadow: 0 0 30px rgba(255, 75, 11, .55);
+}
+.grid-floor {
+  background-image: linear-gradient(30deg, rgba(255,255,255,.09) 12%, transparent 12.5%, transparent 87%, rgba(255,255,255,.09) 87.5%, rgba(255,255,255,.09)),
+                    linear-gradient(150deg, rgba(255,255,255,.06) 12%, transparent 12.5%, transparent 87%, rgba(255,255,255,.06) 87.5%, rgba(255,255,255,.06));
+  background-size: 70px 40px;
+}
+.forklift-wheel {
+  background: radial-gradient(circle at center, #1a1a1a 0 18%, #596069 19% 25%, #121212 26% 100%);
+}
