@@ -12,17 +12,17 @@
                 {
                     "id": 102,
                     "name": "Jigs CBSA",
-                    "image": "JIGS_AND_FIXTURES/JIGS CBSA/pictures/Jigs_Cbsa_web.png"
+                    "image": "JIGS_AND_FIXTURES/JIG_CBSA/pictures/Jig_CBHA_web.png"
                 },
                 {
                     "id": 103,
                     "name": "Jigs CHSA",
-                    "image": "JIGS_AND_FIXTURES/JIGS CHSA/pictures/Jigs_Cbha_web.png"
+                    "image": "JIGS_AND_FIXTURES/JIG_CHSA/pictures/Jig_CHSA_web.png"
                 },
                 {
                     "id": 104,
                     "name": "Welding Fixture",
-                    "image": "JIGS_AND_FIXTURES/WELDING FIXTURE/pictures/Jigs_Cbha_web.png"
+                    "image": "JIGS_AND_FIXTURES/Welding_Fixtures/pictures/Welding_Fixture_web.png"
                 }
             ]
         },
@@ -34,55 +34,60 @@
                     "id": 201,
                     "name": "Bin Transfer Trolley",
                     "image": [
-                        "Trolley_Material_handling/Bin transfer trolley/pictures/Bin_transfer_trolley1_web.png",
-                        "Trolley_Material_handling/Bin transfer trolley/pictures/Bin_transfer_trolley2_web.png"
+                        "Trolley_Material_handling/bin_transfer_trolley/pictures/Bin_transfer_trolley1_web.png",
+                        "Trolley_Material_handling/bin_transfer_trolley/pictures/Bin_transfer_trolley2_web.png"
                     ]
                 },
                 {
                     "id": 202,
                     "name": "Film Roll Trolley",
-                    "image": "Trolley_Material_handling/Film_Roll/pictures/Film_Roll_web.png"
+                    "image": "Trolley_Material_handling/film_roll_trolley/pictures/Film_Roll_trolley_web.png"
+                },
+                {
+                    "id": 203,
+                    "name": "Film Roll",
+                    "image": "Trolley_Material_handling/film_roll/pictures/Film_Roll_web.png"
                 },
                 {
                     "id": 204,
                     "name": "Heat Treatment Trolley",
-                    "image": "Trolley_Material_handling/Heat treatment Trolley/pictures/Heat_Treatment_Trolley_web.png"
-                },
-                {
-                    "id": 204,
-                    "name": "Jumbo Trolley",
-                    "image": "Trolley_Material_handling/Jumbo Trolley/pictures/Jumbo_Trolley_web.png"
+                    "image": "Trolley_Material_handling/heat_treatment_trolley/pictures/Heat_Treatment_Trolley_web.png"
                 },
                 {
                     "id": 205,
-                    "name": "Overhead Manipulator",
-                    "image": "Trolley_Material_handling/Overhead Manipulator/pictures/Overhead_Manipulator_web.png"
+                    "name": "Jumbo Trolley",
+                    "image": "Trolley_Material_handling/jumbo_trolley/pictures/Jumbo_Trolley_web.png"
                 },
                 {
                     "id": 206,
                     "name": "Overhead Manipulator",
-                    "image": [
-                        "Trolley_Material_handling/Returnable Storage Rack/pictures/Returnable_storage_rack1_web.png",
-                        "Trolley_Material_handling/Returnable Storage Rack/pictures/Returnable_storage_rack2_web.png"
-                    ]
+                    "image": "Trolley_Material_handling/overhead_manipulator/pictures/Overhead_Manipulator_web.png"
                 },
                 {
                     "id": 207,
-                    "name": "Storage Racks",
-                    "image": "Trolley_Material_handling/Storage Racks/pictures/Storage_Racks_web.png"
-                },
-                {
-                    "id": 208,
-                    "name": "Transmission RSR Racks",
+                    "name": "Overhead Manipulator",
                     "image": [
-                        "Trolley_Material_handling/Transmission RSR Racks/pictures/Transmission_RSR_racks1_web.png",
-                        "Trolley_Material_handling/Transmission RSR Racks/pictures/Transmission_RSR_racks2_web.png",
-                        "Trolley_Material_handling/Transmission RSR Racks/pictures/Transmission_RSR_racks3_web.png"
+                        "Trolley_Material_handling/returnable_storage_racks/pictures/Returnable_storage_rack1_web.png",
+                        "Trolley_Material_handling/returnable_storage_racks/pictures/Returnable_storage_rack2_web.png"
                     ]
                 },
                 {
                     "id": 208,
+                    "name": "Storage Racks",
+                    "image": "Trolley_Material_handling/storage_racks/pictures/Storage_Racks_web.png"
+                },
+                {
+                    "id": 209,
                     "name": "Transmission RSR Racks",
+                    "image": [
+                        "Trolley_Material_handling/transmission_RSR_racks/pictures/Transmission_RSR_racks1_web.png",
+                        "Trolley_Material_handling/transmission_RSR_racks/pictures/Transmission_RSR_racks2_web.png",
+                        "Trolley_Material_handling/transmission_RSR_racks/pictures/Transmission_RSR_racks3_web.png"
+                    ]
+                },
+                {
+                    "id": 210,
+                    "name": "Workstation",
                     "image": "Trolley_Material_handling/Workstation/pictures/Workstation.png"
                 }
             ]

@@ -9,7 +9,8 @@ export default {
           orangeDark: "#e73f04",
           charcoal: "#252525",
           panel: "#2b2b2b",
-          muted: "#6b6b6b"
+          muted: "#6b6b6b",
+          orangeLight: "#eb6536"
         }
       },
       fontFamily: {

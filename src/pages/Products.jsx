@@ -85,48 +85,44 @@ import { Link } from "react-router-dom";
 import ForkliftArt from "../components/ForkliftArt";
 import { useProducts } from "../context/productList";
 import { useEffect, useState } from "react";
+import ProductImageCarousel from "../components/ProductImageCarousel";
 const PRODUCTS_URL = "https://website-sr-data-517255845732-ap-south-1-an.s3.ap-south-1.amazonaws.com/product-list/productList.json"
 const base_url = "https://website-sr-data-517255845732-ap-south-1-an.s3.ap-south-1.amazonaws.com/product-list/"
 
 export default function Products() {
   const [productListHome, setProductList] = useState([])
-  const { productList, setProducts } = useProducts();
+  const { products, setProducts } = useProducts();
+
+
+  const setModifiedData = (data) => {
+    let productListNew = [];
+
+    data.categories.forEach((item) => {
+      productListNew = [
+        ...productListNew,
+        ...item.products,
+      ];
+    });
+    setProductList(productListNew)
+
+  }
 
   const callData = async () => {
     try {
-      const response = await fetch(PRODUCTS_URL);
-
-      if (!response.ok) {
-        throw new Error("Failed to fetch products");
-      }
-
-      const data = await response.json();
-
-      console.log("API data:", data);
-
-      let productListNew = [];
-
-      data.categories.forEach((item) => {
-        productListNew = [
-          ...productListNew,
-          ...item.products,
-        ];
-      });
-
-      console.log("Product list:", productListNew);
-
+      const data = await getProductData()
       setProducts(data);
-      setProductList(productListNew)
-
-      return data;
+      setModifiedData(data)
     } catch (error) {
-      console.log("error ::", error);
+
     }
   }
 
   useEffect(() => {
-    if (!productList || productList.length <= 0) {
+    console.log("first ", products)
+    if (!products || products.length <= 0) {
       callData()
+    } else {
+      setModifiedData(products)
     }
   }, [])
   return (
@@ -139,11 +135,15 @@ export default function Products() {
             const product_image = `${base_url}${product.image}`;
             return (
               <article key={index} className="group overflow-hidden rounded-2xl bg-white shadow-soft transition hover:-translate-y-1">
-                <div className="relative h-56 overflow-hidden bg-gradient-to-br from-zinc-800 to-zinc-700">
+                {/* <div className="relative h-56 overflow-hidden bg-gradient-to-br from-zinc-800 to-zinc-700">
                   {
                     !product_image ? <ForkliftArt electric /> :
                       <img src={product_image} className=" h-56 w-full  text-brand-orange" strokeWidth={1.2} />}
-                </div>
+                </div> */}
+                <ProductImageCarousel
+                  image={product.image}
+                  name={product.name}
+                />
                 <div className="p-6">
                   <p className="text-xs font-bold uppercase tracking-widest text-brand-orange">{product.tag}</p>
                   <h2 className="mt-2 text-xl font-black text-zinc-800">{product.name}</h2>

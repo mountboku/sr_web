@@ -18,7 +18,7 @@ export default function Header() {
     ? 'text-white/60 hover:text-white'
     : 'text-black/60 hover:text-black';
 
-
+  console.log("isTargetPage", isTargetPage)
   return (
     <header className="absolute left-0 right-0 top-0 z-30">
       <div className="mx-auto flex max-w-[1900px] items-center justify-between px-5 py-5 md:px-10">
@@ -34,9 +34,16 @@ export default function Header() {
               {label}
             </NavLink>
           ))}
-          <Link
+          {/* <Link
             to="/contact"
             className={(isActive) => `rounded-full border px-5 py-2.5 transition-colors hover:bg-white hover:text-brand-charcoal ${isActive ? activeColor : idleColor} ${isActive ? "border-white/20" : "border-black/20"}`}
+          >
+            REQUEST QUOTE
+          </Link> */}
+          <Link
+            to="/contact"
+            className={`rounded-full border px-5 py-2.5 transition-colors text-black/60 ${idleColor} ${activeColor} `}
+          // className={(isActive) => `rounded-full border px-5 py-2.5 transition-colors hover:bg-white hover:text-brand-charcoal ${!isTargetPage ? activeColor : idleColor} ${isActive ? "border-white/20" : "border-black/20"}`}
           >
             REQUEST QUOTE
           </Link>

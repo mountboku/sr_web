@@ -1,0 +1,23 @@
+{
+    "about": {
+        "company_name": "SR Enterprises",
+        "contact_us": "Contact Us"
+    },
+    "home_page": {
+        "poster": {
+            "slogan": "Leading Manufacturer of Steel Pallets & Industrial Packaging Solutions in India",
+            "tag1": "Highly Customizable",
+            "tag2": "BEST QUALITY",
+            "tag3": "Competitve lower rates",
+            "why_choose_us": "Why Choose Us",
+            "wcu_title_1": "High Quality",
+            "wcu_desc_1": "Reliable industrial equipment",
+            "wcu_title_2": "Trusted Partner",
+            "wcu_desc_2": "Experienced technical support",
+            "wcu_title_3": "Competitive Value",
+            "wcu_desc_3": "Quality solutions at the right cost",
+            "wcu_title_4": "Industry Experience",
+            "wcu_desc_4": "18 years of trusted engineering expertise"
+        }
+    }
+}

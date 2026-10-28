@@ -1,53 +1,80 @@
 import { ArrowRight, Mail, Phone, CircleArrowRight } from "lucide-react";
-import ForkliftArt from "../components/ForkliftArt";
+// import ForkliftArt from "../components/ForkliftArt";
 import ProductStrip from "../components/ProductStrip";
 import FeatureList from "../components/FeatureList";
 import { Link } from "react-router-dom";
 import enginePallet from "../images/enginePallet.png";
 import { useEffect, useState } from "react";
 import { useProducts } from "../context/productList";
+import { getProductData } from "../api/productApi";
 
 const PRODUCTS_URL = "https://website-sr-data-517255845732-ap-south-1-an.s3.ap-south-1.amazonaws.com/product-list/productList.json"
 
 export default function Home() {
   const [productListHome, setProductList] = useState([])
-  const { productList, setProducts } = useProducts();
+  const { products, setProducts } = useProducts();
+
+  // const callData = async () => {
+  //   try {
+  //     const response = await fetch(`${PRODUCTS_URL}?v=${Date.now()}`);
+
+  //     if (!response.ok) {
+  //       throw new Error("Failed to fetch products");
+  //     }
+
+  //     const data = await response.json();
+
+  //     console.log("API data:", data);
+
+  //     let productListNew = [];
+
+  //     data.categories.forEach((item) => {
+  //       productListNew = [
+  //         ...productListNew,
+  //         ...item.products,
+  //       ];
+  //     });
+
+  //     console.log("Product list:", productListNew);
+
+  //     setProducts(data);
+  //     setProductList(productListNew)
+
+  //     return data;
+  //   } catch (error) {
+  //     console.log("error ::", error);
+  //   }
+  // }
+
+  const setModifiedData = (data) => {
+    let productListNew = [];
+
+    data.categories.forEach((item) => {
+      productListNew = [
+        ...productListNew,
+        ...item.products,
+      ];
+    });
+    setProductList(productListNew)
+
+    console.log("Product list:", productListNew);
+  }
 
   const callData = async () => {
     try {
-      const response = await fetch(PRODUCTS_URL);
-
-      if (!response.ok) {
-        throw new Error("Failed to fetch products");
-      }
-
-      const data = await response.json();
-
-      console.log("API data:", data);
-
-      let productListNew = [];
-
-      data.categories.forEach((item) => {
-        productListNew = [
-          ...productListNew,
-          ...item.products,
-        ];
-      });
-
-      console.log("Product list:", productListNew);
-
+      const data = await getProductData()
       setProducts(data);
-      setProductList(productListNew)
-
-      return data;
+      setModifiedData(data)
     } catch (error) {
-      console.log("error ::", error);
+
     }
   }
 
   useEffect(() => {
-    if (!productList || productList.length <= 0) {
+    if (!products || products.length <= 0) {
       callData()
+    } else {
+      setModifiedData(products)
     }
   }, [])
 

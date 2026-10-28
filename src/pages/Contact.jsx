@@ -1,8 +1,40 @@
 import { Mail, MapPin, Phone } from "lucide-react";
-import { useState } from "react";
+import React, { useEffect, useState } from "react";
+import { useProducts } from "../context/productList";
+const PRODUCTS_URL = "https://website-sr-data-517255845732-ap-south-1-an.s3.ap-south-1.amazonaws.com/product-list/productList.json"
 
-export default function Contact() {
+function Contact() {
   const [sent, setSent] = useState(false);
+  const { productList, setProducts } = useProducts();
+
+  // const [productData, setProductData] = useState(false)
+
+  const callData = async () => {
+    try {
+      const response = await fetch(`${PRODUCTS_URL}?v=${Date.now()}`);
+
+      if (!response.ok) {
+        throw new Error("Failed to fetch products");
+      }
+
+      const data = await response.json();
+      console.log("Product list:", data);
+
+      setProductData(data);
+      // setProductList(productListNew)
+
+      return data;
+    } catch (error) {
+      console.log("error ::", error);
+    }
+  }
+
+  useEffect(() => {
+    console.log("productList", productList)
+    // if (!productData || productData.length <= 0) {
+    //   callData()
+    // }
+  }, [])
   return (
     <main className="min-h-screen bg-zinc-100 px-5 pb-20 pt-28 md:px-10">
       <div className="mx-auto grid max-w-6xl overflow-hidden rounded-3xl bg-white shadow-card lg:grid-cols-[.9fr_1.1fr]">
@@ -20,7 +52,14 @@ export default function Contact() {
           </div>
           <input placeholder="Company name" className="mt-5 w-full rounded-lg border border-zinc-200 px-4 py-3 outline-none focus:border-brand-orange" />
           <select className="mt-5 w-full rounded-lg border border-zinc-200 px-4 py-3 outline-none focus:border-brand-orange">
-            <option>Product interested in</option><option>Diesel Forklift</option><option>Electric Forklift</option><option>GTWY</option><option>Hand Pallet</option>
+            <option value="" disabled selected hidden>Select Product ...</option>
+            {/* {
+              productData && productData.categories.map((item, index) => {
+                return item.products.map((subItem, subIndex) => <option key={subIndex} value="">{subItem.name}</option>)
+              })
+
+            } */}
+            {/* <option>Product interested in</option><option>Diesel Forklift</option><option>Electric Forklift</option><option>GTWY</option><option>Hand Pallet</option> */}
           </select>
           <textarea rows="6" placeholder="Tell us what you need..." className="mt-5 w-full rounded-lg border border-zinc-200 px-4 py-3 outline-none focus:border-brand-orange"></textarea>
           <button className="mt-5 rounded-full bg-brand-orange px-7 py-3 text-sm font-black text-white hover:bg-brand-orangeDark">SEND ENQUIRY</button>
@@ -30,3 +69,5 @@ export default function Contact() {
     </main>
   );
 }
+
+export default React.memo(Contact)
