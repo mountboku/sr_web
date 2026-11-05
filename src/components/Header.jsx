@@ -18,7 +18,6 @@ export default function Header() {
     ? 'text-white/60 hover:text-white'
     : 'text-black/60 hover:text-black';
 
-  console.log("isTargetPage", isTargetPage)
   return (
     <header className="absolute left-0 right-0 top-0 z-30">
       <div className="mx-auto flex max-w-[1900px] items-center justify-between px-5 py-5 md:px-10">

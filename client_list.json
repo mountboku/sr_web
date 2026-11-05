@@ -1,0 +1,98 @@
+[
+    {
+        "_id": 1,
+        "client_name": "Maruti Suzuki India Limited Gurugram",
+        "client_site": "",
+        "client_logo": "msil_gurugram.png"
+    },
+    {
+        "_id": 2,
+        "client_name": "Maruti Suzuki India Limited Hansalpur",
+        "client_site": "",
+        "client_logo": "msil_hansalpur.png"
+    },
+    {
+        "_id": 3,
+        "client_name": "Maruti Suzuki India Limited Kharkhoda",
+        "client_site": "",
+        "client_logo": "msil_kharkhoda.png"
+    },
+    {
+        "_id": 4,
+        "client_name": "Maruti Suzuki India Limited Manesar",
+        "client_site": "",
+        "client_logo": "msil_manesar.png"
+    },
+    {
+        "_id": 5,
+        "client_name": "Escorts AMG",
+        "client_site": "",
+        "client_logo": "escorts_amg.png"
+    },
+    {
+        "_id": 6,
+        "client_name": "Escorts Kubota",
+        "client_site": "",
+        "client_logo": "escorts_kubota.png"
+    },
+    {
+        "_id": 7,
+        "client_name": "Flipkart",
+        "client_site": "",
+        "client_logo": "flipkart.png"
+    },
+    {
+        "_id": 8,
+        "client_name": "honda",
+        "client_site": "",
+        "client_logo": "honda_car_plant.png"
+    },
+    {
+        "_id": 9,
+        "client_name": "JBM",
+        "client_site": "",
+        "client_logo": "jbm.png"
+    },
+    {
+        "_id": 10,
+        "client_name": "SMIPL",
+        "client_site": "",
+        "client_logo": "smipl.png"
+    },
+    {
+        "_id": 11,
+        "client_name": "SML Mahindra Limited",
+        "client_site": "",
+        "client_logo": "sml_mahindra_limited.png"
+    },
+    {
+        "_id": 12,
+        "client_name": "Tafe",
+        "client_site": "",
+        "client_logo": "sml_mahindra_limited.png"
+    },
+    {
+        "_id": 13,
+        "client_name": "Taikisha",
+        "client_site": "",
+        "client_logo": "taikisha.png"
+    },
+    {
+        "_id": 14,
+        "client_name": "TDSG",
+        "client_site": "",
+        "client_logo": "tdsg.png"
+    },
+    {
+        "_id": 15,
+        "client_name": "Toyota Tsusho",
+        "client_site": "",
+        "client_logo": "toyota_tsusho.png"
+    },
+    {
+        "_id": 16,
+        "client_name": "Vinar",
+        "client_site": "",
+        "client_logo": "vinar.png"
+    }
+]

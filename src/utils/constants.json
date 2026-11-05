@@ -1,10 +1,42 @@
 {
-    "about": {
+    "about_page": {
         "company_name": "SR Enterprises",
-        "contact_us": "Contact Us"
+        "contact_us": "Contact Us",
+        "who_we_are": "Who we are",
+        "slogan_top": "A modern industrial equipment partner",
+        "description_top": "Replace this content with your company history and dealership profile. The page is already structured for a professional industrial website.",
+        "experience_text": "Years Experience",
+        "experience_count": "18+",
+        "product_cat_text": "Product Categories",
+        "product_cat_count": "20",
+        "customer_support_text": "Customer Support",
+        "customer_support_hours": "24/7",
+        "orignal_products": "Orignal Products",
+        "orignal_products_percentage": "100%",
+        "manufacturing_footprint_text": "Total Manufacturing Footprint",
+        "manufacturing_footprint_stat": "19,700sq. ft.",
+        "faberication_unit_text": "Fabrication Unit",
+        "faberication_unit_stat": "50+",
+        "monthly_production_capacity_text": "Monthly Production Capacity",
+        "monthly_production_capacity_stat": "100 MT",
+        "supplier_vendor_stat": "100+",
+        "supplier_vendor_text": "Suppliers & Vendors",
+        "OEM_and_industrial_customer_text": "OEM & Industrial Customers",
+        "OEM_and_industrial_customer_stat": "16",
+        "our_process_text": "OUR PROCESS",
+        "process_step_1_title": "GIVE US YOUR 2D / CAD / COMPONENT",
+        "process_step_1_desc": "Share your drawing, 2D/CAD file, component or requirement.",
+        "process_step_2_title": "OR HAVE ANY MATERIAL HANDLING IDEA",
+        "process_step_2_desc": "Discuss your idea or application with our team. We understand your requirement.",
+        "process_step_3_title": "DEVELOP CAD WITH OUR DESIGN TEAM",
+        "process_step_3_desc": "Our experienced design team develops the CAD solution, optimizes the design and recommends the best approach.",
+        "process_step_4_title": "WE PROVIDE MATERIAL HANDLING SOLUTION",
+        "process_step_4_desc": "We manufacture and deliver a reliable, cost-effective and customized material handling solution for your application."
     },
     "home_page": {
         "poster": {
+            "heading_1": "AUTOMATIVE PACKAGING SPECIALIST",
+            "current_country": "INDIA",
             "slogan": "Leading Manufacturer of Steel Pallets & Industrial Packaging Solutions in India",
             "tag1": "Highly Customizable",
             "tag2": "BEST QUALITY",
@@ -17,7 +49,9 @@
             "wcu_title_3": "Competitive Value",
             "wcu_desc_3": "Quality solutions at the right cost",
             "wcu_title_4": "Industry Experience",
-            "wcu_desc_4": "18 years of trusted engineering expertise"
+            "wcu_desc_4": "18 years of trusted engineering expertise",
+            "heading_bottom": "Industrial handling solutions built around your operation.",
+            "description_bottom": "This section is ready for your actual company profile. Add your dealership information, product brands, years of experience, service locations and key differentiators."
         }
     }
 }

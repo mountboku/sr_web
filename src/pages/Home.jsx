@@ -4,47 +4,18 @@ import ProductStrip from "../components/ProductStrip";
 import FeatureList from "../components/FeatureList";
 import { Link } from "react-router-dom";
 import enginePallet from "../images/enginePallet.png";
+import returnableRack from "../images/returnableRack.png";
+
 import { useEffect, useState } from "react";
 import { useProducts } from "../context/productList";
 import { getProductData } from "../api/productApi";
+import AnimatedPhotoGrid from "../components/AnimatedPhotoGrid";
 
 const PRODUCTS_URL = "https://website-sr-data-517255845732-ap-south-1-an.s3.ap-south-1.amazonaws.com/product-list/productList.json"
 
 export default function Home() {
   const [productListHome, setProductList] = useState([])
   const { products, setProducts } = useProducts();
-
-  // const callData = async () => {
-  //   try {
-  //     const response = await fetch(`${PRODUCTS_URL}?v=${Date.now()}`);
-
-  //     if (!response.ok) {
-  //       throw new Error("Failed to fetch products");
-  //     }
-
-  //     const data = await response.json();
-
-  //     console.log("API data:", data);
-
-  //     let productListNew = [];
-
-  //     data.categories.forEach((item) => {
-  //       productListNew = [
-  //         ...productListNew,
-  //         ...item.products,
-  //       ];
-  //     });
-
-  //     console.log("Product list:", productListNew);
-
-  //     setProducts(data);
-  //     setProductList(productListNew)
-
-  //     return data;
-  //   } catch (error) {
-  //     console.log("error ::", error);
-  //   }
-  // }
 
   const setModifiedData = (data) => {
     let productListNew = [];
@@ -57,7 +28,6 @@ export default function Home() {
     });
     setProductList(productListNew)
 
-    console.log("Product list:", productListNew);
   }
 
   const callData = async () => {
@@ -94,6 +64,10 @@ export default function Home() {
               <p className="mt-3 text-center text-3xl font-black tracking-[0.12em] text-yellow-300 sm:text-4xl lg:text-left">INDIA</p>
             */}
               {/* <p className="mb-2 text-center text-2xl font-black tracking-[0.06em] text-white sm:text-3xl lg:text-left">AUTHORIZED</p> */}
+              <div className="max-w-md">
+                <p className="mt-4 text-sm font-medium text-white/70">Leading Manufacturer of Steel Pallets & Industrial Packaging Solutions in India</p>
+              </div>
+
               <h1 className="hero-shadow text-center font-display text-6xl leading-[0.88] tracking-tight text-white sm:text-7xl md:text-8xl lg:text-left xl:text-[100px]">
                 Automotive<br />PACKAGING SPECIALIST
               </h1>
@@ -117,15 +91,51 @@ export default function Home() {
               </div>
 
 
+
+            </div>
+            <div className="mt-20 flex justify-between text-white">
+              {/* <div className="bg-red-500 ">contact us</div>
+              <div className="bg-green-500 bg-red-500 ">32444423242424</div> */}
+              <Link to="/contact" className="inline-flex w-fit items-center gap-2 rounded-full bg-zinc-700 px-4 py-2 text-xs font-bold">
+                <CircleArrowRight className="h-5 w-5 rounded-full bg-brand-orange p-1" /> CONTACT US
+              </Link>
+              <div className="flex items-center gap-3">
+                <Phone className="text-brand-orange" />
+                <div><b className="text-lg">0857-911-1139</b><p className="text-[9px] tracking-[0.2em] text-white/50">WWW.SR Enterprises.EXAMPLE</p></div>
+              </div>
+
+
             </div>
 
           </div>
 
-          <div className="relative px-5 py-8 lg:px-0 lg:py-0">
+          <div className="h-full min-h-[620px] overflow-hidden rounded-bl-[62px] rounded-tl-[62px] bg-brand-charcoal  lg:mt-0 lg:min-h-[820px] flex flex-col ">
+
+            <div className="pt-20 px-8">
+              {/* <div className="max-w-md">
+                <h3 className="text-2xl font-bold tracking-wide text-brand-orange">SR Enterprises</h3>
+                <p className="mt-4 text-sm font-medium text-white/70">Leading Manufacturer of Steel Pallets & Industrial Packaging Solutions in India</p>
+              </div> */}
+
+              {/* <div className="mt-10 grid max-w-xs gap-3">
+                <div className="h-12 overflow-hidden rounded-full bg-zinc-700 p-1 place-items-center">
+                  <div className="grid h-full w-full rounded-full bg-gradient-to-r from-zinc-600 via-brand-orange to-zinc-600 text-white place-items-center tracking-wide">Highly Customizable</div>
+                </div>
+                <div className="grid place-items-center rounded-full bg-zinc-700 py-3 text-sm font-black tracking-wide text-white">BEST QUALITY</div>
+                <div className="h-12 overflow-hidden rounded-full bg-zinc-700 p-1 place-items-center" >
+                  <div className="grid h-full w-full place-items-center rounded-full bg-gradient-to-r from-orange-300 via-zinc-800 to-brand-orange text-white tracking-wide ">Competitve lower rates</div>
+                </div>
+              </div> */}
+            </div>
+            <div className="h-full">
+              {/* <p>sss</p> */}
+              <AnimatedPhotoGrid />
+            </div>
+          </div>
+          {/* <div className="relative px-5 py-8 lg:px-0 lg:py-0">
             <div className="relative h-full min-h-[620px] overflow-hidden rounded-bl-[62px] rounded-tl-[62px] bg-brand-charcoal px-4 py-12 lg:mt-0 lg:min-h-[820px] lg:px-14 lg:py-20">
               <div className="absolute right-0 top-[16%] h-[46%] w-[54%] rounded-tl-[190px] bg-brand-orange"></div>
               <div className="flex h-full flex-col sm:justify-between">
-                {/* <div className="relative z-10 mx-auto max-w-2xl"> */}
                 <div className="relativ z-10">
                   <div className="mb-14 flex items-center justify-between text-white">
                     <span className="text-xs font-black tracking-[0.13em] text-white/70">Automobile Packaging Solutions</span>
@@ -147,14 +157,12 @@ export default function Home() {
                     </div>
                   </div>
 
-                  {/* <div className="absolute right-[-80px] top-[210px] h-[420px] w-[620px] max-w-[90vw]"> */}
-                  <div className="absolute left-[380px] bottom-[150px] h-[420px] w-[620px] max-w-[90vw]">
-                    {/* <ForkliftArt electric /> */}
-                    <img src={enginePallet} alt="Engine Pallet"
+                  <div className="absolute -z-10  left-[300px] bottom-[150px] h-[420px] w-[620px] max-w-[90vw]">
+                    <img src={returnableRack} alt="Engine Pallet"
                       x="0"
                       y="0"
-                      width="300"
-                      height="300"
+                      width="400"
+                      height="500"
                     />
                   </div>
 
@@ -174,7 +182,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </section>
 
