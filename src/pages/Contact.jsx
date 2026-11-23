@@ -92,7 +92,7 @@ function Contact() {
           </select>
           <textarea rows="6" name="message" placeholder="Tell us what you need..." className="mt-5 w-full rounded-lg border border-zinc-200 px-4 py-3 outline-none focus:border-brand-orange" value={state.message} onChange={(e) => validate(e)}></textarea>
           <button className="mt-5 rounded-full bg-brand-orange px-7 py-3 text-sm font-black text-white hover:bg-brand-orangeDark" onClick={onSend}>SEND ENQUIRY</button>
-          {sent && <p className="mt-4 text-sm font-bold text-green-600">Thank you. Connect this form to your API or email service for production.</p>}
+          {sent && <p className="mt-4 text-sm font-bold text-green-600">Thank you. We will connect soon</p>}
         </form>
       </div>
     </main>
